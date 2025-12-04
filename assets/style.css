@@ -1,0 +1,368 @@
+/*GLOBAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: "Lato", sans-serif;
+}
+
+.spacing{
+    padding: 50px 10px;
+}
+
+/*HEADER*/ 
+
+header{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 54px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+ul{
+    padding-left: 40px;
+} 
+
+header > nav > ul > li{
+    list-style: none;
+}
+
+header > nav > ul > li:hover{
+    background-color: #ccc;
+}
+
+header > nav > ul > li:hover a{
+    color: black;
+}
+
+header > nav > ul > li:hover i{
+    color: black;
+}
+
+
+header nav ul{
+    display: flex;
+}
+
+header nav > ul a{
+    text-decoration: none;
+    padding: 12px 24px;
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding-bottom: 16px;
+}
+
+header nav > ul a:hover{
+    background-color: #ccc;
+}
+
+.header_search{
+    color: white; 
+    font-size: 1.1rem;
+    padding: 14px 24px;
+}
+.header_search:hover{
+    background-color: red;
+}
+
+.nav__more > i{
+    color: #fff;
+    padding-right: 24px;
+}
+
+.nav__more{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.nav__more > a{
+    padding-right: 7px;
+}
+
+.nav__more .nav_item{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 150%;
+    opacity: 0;
+    pointer-events: none;  
+    transition: 0.2s ease;
+    z-index: 9999;
+}
+
+.nav__more:hover .nav_item{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.nav__more .nav_item a{
+    color: black;
+    text-transform: capitalize;
+    display: block;
+    padding: 5px 5px;
+    height: auto;
+    padding-left: 11px;
+}
+.nav_item{
+    margin-top: 0%;                                                                                      
+}
+
+
+/*Carousel*/
+.carousel{
+    width: 100%;
+    height: 1300px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+/*TRENDING SECTION*/
+
+.trend{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.trend:hover{
+    transform: translateY(-15px);
+}
+
+.tiktok-embed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trend h3, p{
+    margin: 5px 0;              
+}
+
+.trend button{
+    margin: 15px 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 150px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.trend button:hover{
+    background-color: rgb(131, 129, 129);
+}
+
+.content{
+    width: 90%;
+    max-width: 1600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    padding-bottom: 250px;
+}
+
+.noidung{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* ---------- Responsive breakpoints ---------- */
+@media (max-width: 992px){
+    .content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .content{
+        grid-template-columns: 1fr;
+    }
+
+    .trend{
+        max-width: 100%;
+    }
+}
+
+
+
+/*BAND INTRODUCTION*/
+
+.heading--white{
+    padding-bottom: 100px;
+}
+
+.heading{
+    text-align: center;
+}
+.heading h1{
+    font-size: 2rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding-top: 100px;
+    color: #460b0b;
+    font-weight: 700;
+}
+.heading p{
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #460b0b;
+    margin-bottom: 10px;
+}
+
+
+/*Band*/
+.band_content{
+    max-width: 800px;
+    margin:0 auto;
+}
+
+.band_content p{
+    color: white;
+    font-style: italic;
+}
+
+.band_item > p{
+    text-align: justify;
+    line-height: 1.2rem;
+    word-spacing: 1px;
+}
+.band_member{
+    display: flex;
+    justify-content: space-around;
+}
+.band_item{
+    width: 300px;
+    display: grid;
+}
+.band_item h5{
+    font-size: 1rem;
+    padding-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    color: white;
+    margin-top: 30px;
+    font-family: 'Times New Roman', Times, serif
+}
+.band_item img{
+    width: 100%;
+    align-items: center;
+    border-radius: 10%;
+    margin: 0 auto;
+    display: grid;
+    gap: 100px;
+}
+.band{
+    background-color: #000000;
+    padding-bottom: 120px;
+    padding-top: 5px;
+}
+
+/*CONTACT SECTION*/
+.contact_content{
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.contact_left .contact_item{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.contact_left .contact_item p{
+    font-size: 1.2rem;
+    margin: 0;
+    margin-left: 20px;
+}
+.contact_right .contact_input{
+    display: flex;
+    margin-bottom: 10px;
+}
+.contact_right input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.contact_input input:first-of-type{
+    margin-right: 20px;
+}
+.contact_right button{
+    float: right;
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    border: none;
+    background-color: black;
+    color: white;
+}
+.contact_right button:hover{
+    background-color: #ccc;
+}
+
+
+/*IMAGE*/
+.image{
+    background-image: url('../assets/img/thumb-1920-1340934.png');
+    width: 100%;
+    height: 70vh;             
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(50%);
+    margin: 85px 0;
+}
+
+@media (max-width: 768px){
+    .image{
+        height: 50vh;       
+    }
+}
+
+@media (max-width: 480px){
+    .image{
+        height: 40vh;      
+    }
+}
+
+
+/*FOOTER*/
+footer{
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 85px;
+}
+footer .footer_icon{
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+
