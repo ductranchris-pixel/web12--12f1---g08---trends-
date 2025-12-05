@@ -10,7 +10,7 @@ html, body{
 }
 
 .spacing{
-    padding: 50px 10px;
+    padding: 50px 0px;
 }
 
 /*HEADER*/ 
@@ -121,7 +121,7 @@ header nav > ul a:hover{
 /*Carousel*/
 .carousel{
     width: 100%;
-    height: 70vh;       
+    height: 90vh;       
     overflow: hidden;
     position: relative;
     margin-top: 0px;
@@ -385,6 +385,7 @@ footer .footer_icon{
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
+
 
 
 
