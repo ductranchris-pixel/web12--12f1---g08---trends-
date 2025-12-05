@@ -334,7 +334,7 @@ header nav > ul a:hover{
 
 /*IMAGE*/
 .image{
-    background-image: url('../assets/img/thumb-1920-1340934.png');
+    background-image: url('../assets/img/4979f674-cd3f-467f-95be-5f0a0cfd84e7.jpg');
     width: 100%;
     height: 70vh;             
     background-size: cover;
@@ -367,5 +367,6 @@ footer .footer_icon{
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
+
 
 
