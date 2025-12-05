@@ -93,7 +93,7 @@ header nav > ul a:hover{
     top: 100%;
     left: 0;
     background-color: #fff;
-    width: 150%;
+    width: 180px;
     opacity: 0;
     pointer-events: none;  
     transition: 0.2s ease;
@@ -117,11 +117,64 @@ header nav > ul a:hover{
     margin-top: 0%;                                                                                      
 }
 
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 5px 0;
+    }
+    header nav ul {
+        flex-wrap: wrap;
+        padding-left: 10px; 
+    }
+    header nav ul li a {
+        padding: 10px 12px; 
+        font-size: 0.9rem;
+    }
+    .header_search {
+        padding: 10px 15px; 
+        font-size: 1rem;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul li a {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header nav ul li a {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+        letter-spacing: 0.5px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header nav ul {
+        justify-content: center; 
+    }
+
+    header nav ul li a {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+}
+
 
 /*Carousel*/
 .carousel{
     width: 100%;
-    height: 90vh;       
+    height: 102vh;       
     overflow: hidden;
     position: relative;
     margin-top: 0px;
@@ -262,6 +315,7 @@ header nav > ul a:hover{
     max-width: 800px;
     text-align: center;
     margin: 0 auto;
+    padding: 0 50px;
 }
 
 
@@ -274,6 +328,7 @@ header nav > ul a:hover{
 .band_content p{
     color: white;
     font-style: italic;
+    padding: 0 50px;
 }
 
 .band_item > p{
@@ -283,33 +338,47 @@ header nav > ul a:hover{
 }
 .band_member{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 .band_item{
-    width: 300px;
-    display: grid;
+    width: 100%;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .band_item h5{
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
     padding-bottom: 20px;
     text-align: center;
     max-width: 800px;
     color: white;
     margin-top: 30px;
-    font-family: 'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif;
+    margin: 15px 0;
 }
 .band_item img{
     width: 100%;
+    height: auto;
     align-items: center;
-    border-radius: 10%;
-    margin: 0 auto;
-    display: grid;
-    gap: 100px;
+    border-radius: 12px;
+    object-fit: cover;
 }
 .band{
     background-color: #000000;
     padding-bottom: 120px;
     padding-top: 5px;
+}
+
+@media (max-width: 480px) {
+    .band_item {
+        max-width: 200px;
+    }
+    .band_item h5 {
+        font-size: 0.9rem;
+    }
 }
 
 /*CONTACT SECTION*/
@@ -319,6 +388,7 @@ header nav > ul a:hover{
     max-width: 800px;
     margin: 0 auto;
     margin-top: 50px;
+    padding: 0 20px;
 }
 .contact_left .contact_item{
     display: flex;
