@@ -218,6 +218,12 @@ header nav > ul a:hover{
     }
 }
 
+@media (max-width: 1024px){
+    .content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 600px){
     .content{
         grid-template-columns: 1fr;
@@ -385,6 +391,7 @@ footer .footer_icon{
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
+
 
 
 
